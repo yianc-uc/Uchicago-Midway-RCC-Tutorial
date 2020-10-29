@@ -34,4 +34,12 @@ To use ThinLinc in web browser, point to the [address](https://midway2.rcc.uchic
 
 #### ThinLinc Deskop Client
 
-Download and install the proper ThinLinc client from [ThinLinc download page](https://www.cendio.com/thinlinc/download)
+Download and install the proper ThinLinc client from [ThinLinc download page](https://www.cendio.com/thinlinc/download).
+
+Open the client and use the following information to log in
+
+![](https://rcc.uchicago.edu/docs/_images/thinlinc-client.png)
+
+The default setting for ThinLinc is for the client to open in a fullscreen window that fills “all monitors”. This may cause problems if you want to switch to other windows on your local machine. If you would prefer to work with ThinLinc from its own window, click Options from the initial login interface and then Screen to adjust your settings as desired. The following is an example of a setup that places the ThinLinc client in its own window:
+
+<img src="https://rcc.uchicago.edu/docs/_images/thinlinc-options.png" width="600"/>
