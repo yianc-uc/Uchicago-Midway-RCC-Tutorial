@@ -2,7 +2,7 @@
 
 This is a tutorial for using Uchicago Midway research computing center (RCC). 
 
-*This tutorial was adapted from [RCC Website](https://rcc.uchicago.edu/docs/connecting/index.html). I highly recommend you to check out the website for detailed questions.*
+*This tutorial was adapted from [RCC Website](https://rcc.uchicago.edu/docs/connecting/index.html). I will keep it short to provide you necessary information to interact with the computing cluster and run jobs on it. I highly recommend you to check out the website for detailed questions.*
 
 ## Connecting to RCC
 
@@ -43,3 +43,21 @@ Open the client and use the following information to log in
 The default setting for ThinLinc is for the client to open in a fullscreen window that fills “all monitors”. This may cause problems if you want to switch to other windows on your local machine. If you would prefer to work with ThinLinc from its own window, click Options from the initial login interface and then Screen to adjust your settings as desired. The following is an example of a setup that places the ThinLinc client in its own window:
 
 <img src="https://rcc.uchicago.edu/docs/_images/thinlinc-options.png" width="600"/>
+
+Then you can log in and complete the 2FA as before. Upon successfully logging in, you will be presented with an IceWM desktop. Select Applications tab in the top left corner to access the terminal, file browser, and other utilities.
+
+<img src="https://rcc.uchicago.edu/docs/_images/thinlinc-desktop.png" width="600"/>
+
+To copy/paste between Thinlinc webaccess client and your computer, first, you need to open the side toolbar by clicking the handle. After that you click the Clipboard icon. The text field that just open will be synced with the clipboard on the server, so you can copy and paste to and from this text field.
+
+With ThinLinc it is possible to maintain an active session after you have closed your connection to Midway. To disconned from Midway but maintain an active session (e.g. when you log back into the ThinLinc client you will resume your remote session from where you left off), simply close the ThinLinc window. NOTE: You must have End existing session unchecked for this to occur.
+
+To exit ThinLinc and terminate your session completely, simply exit or close the ThinLinc application.
+
+## Run Jobs on Midway
+
+Firstly, when you connect to the cluster, you are in one of its login nodes. Login nodes may be used for compiling and debugging code, installing software, editing and managing files, submitting jobs, or any other work that is not long-running or computationally intensive. Login nodes should not be used for computionally intensive work. If you find your process is terminated and restarted, be sure to use compute node following the instructions below.
+
+In Midway RCC, all jobs running on the compute nodes consume Service Units (SUs). All consumptions of SUs will be recorded and the amount of the SUs used will be deducted from the account balance. If you have multiple accounts, make sure the account for our course is **caam37830**. 
+
+You can check the account balance by
