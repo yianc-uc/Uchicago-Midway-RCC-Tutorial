@@ -56,8 +56,22 @@ To exit ThinLinc and terminate your session completely, simply exit or close the
 
 ## Run Jobs on Midway
 
+### Check Your Account Balance
+
 Firstly, when you connect to the cluster, you are in one of its login nodes. Login nodes may be used for compiling and debugging code, installing software, editing and managing files, submitting jobs, or any other work that is not long-running or computationally intensive. Login nodes should not be used for computionally intensive work. If you find your process is terminated and restarted, be sure to use compute node following the instructions below.
 
 In Midway RCC, all jobs running on the compute nodes consume Service Units (SUs). All consumptions of SUs will be recorded and the amount of the SUs used will be deducted from the account balance. If you have multiple accounts, make sure the account for our course is **caam37830**. 
 
-You can check the account balance by
+You can check the account balance by type in the command line
+
+```
+rcchelp balance
+```
+
+To see the overall summary of your usage, type
+
+```
+rcchelp usage
+```
+
+
