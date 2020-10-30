@@ -101,6 +101,13 @@ Here is a detailed explanation of what each of the option does:
 
 | Option  |  Description |
 |:--|:--|
-| `#SBATCH --job-name=example_sbatch`  | Assigns label example_sbatch to the job.  |
-|   |   |
-|   |   |
+| `#SBATCH --job-name=example_python`  | Assigns label example_python to the job        |
+| `#SBATCH --output=script.out`        | Writes console output to file `script.out`     |
+| `#SBATCH --error=script.err`         | Writes an error messages to file `script.err`  |
+| `#SBATCH --time=00:05:00`            | Reserves the computing resources for 5 minutes (or less if program completes before 5 min) |
+| `#SBATCH --partition=broadwl`        | Requests compute nodes from the broadwl partition on the Midway cluster |
+| `#SBATCH --nodes=1`                  | Requests 1 compute nodes |
+| `#SBATCH --ntasks-per-node=1`        | Requests 1 core (CPU) per node, for a total of 1 * 1 = 1 core |
+| `#SBATCH --mem-per-cpu=2000`         | Requests 2000 MB (2 GB) of memory (RAM) per core, for a total of 2 * 1 = 2 GB per node |
+
+
