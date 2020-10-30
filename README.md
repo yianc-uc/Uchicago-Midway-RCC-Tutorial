@@ -110,4 +110,28 @@ Here is a detailed explanation of what each of the option does:
 | `#SBATCH --ntasks-per-node=1`        | Requests 1 core (CPU) per node, for a total of 1 * 1 = 1 core |
 | `#SBATCH --mem-per-cpu=2000`         | Requests 2000 MB (2 GB) of memory (RAM) per core, for a total of 2 * 1 = 2 GB per node |
 
+Then the last two lines of the script load the python module and start to execute `script.py`. In this case, please make sure the `script.py` file is in the proper directory or you may also want to include change of directory commands in the sbatch script.
 
+Finally suppose the sbatch script is saved in the current directory into a file `example.sbatch`. Use the following command to submit it to the cluster
+
+```
+sbatch example.sbatch
+```
+
+#### Interactive Jobs
+
+The `sinteractive` command is used for requesting an interactive session. The sinteractive will direct you to the compute node, set up X11 forwarding, and transfer your current shell environment, including all the modules have previously loaded. To use it, type in the command line
+
+```
+sinteractive --partition=broadwl --nodes=1 --ntasks-per-node=1 --time=00:05:00 --mem-per-cpu=2000
+```
+
+The options are basically the same as `sbatch`. For example using the command above, one can request a 5-minuate interactive session from the broadwl partition. It includes 1 node with 1 core in each node and 2000 MB of memory for each core. The differences are now you can directly see the program output from the shell.
+
+### Managing Jobs
+
+The Slurm job scheduler provides several command-line tools for checking on the status of your jobs and for managing them. For a complete list of Slurm commands, see the Slurm man pages. Here are a few commands that you may find particularly useful:
+
+* **squeue**: finds out the status of jobs submitted by you and other users.
+* **sacct**: retrieves job history and statistics about past jobs.
+* **scancel**: cancels jobs you have submitted.
