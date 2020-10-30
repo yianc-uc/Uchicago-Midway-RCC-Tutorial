@@ -164,3 +164,10 @@ Most UNIX-like operating systems (Mac OS X, Linux, etc) provide a scp command wh
 scp <path to the local file> <CNetID>@midway2.rcc.uchicago.edu:<path you want to store the file>
 scp -r <path to local dir> <CNetID>@midway2.rcc.uchicago.edu:<path you want to store the directory>
 ```
+
+To download the files or directories to your local machine, use the following:
+
+```
+scp <CNetID>@midway2.rcc.uchicago.edu:<path you want to store the file> <path to the local file>
+scp -r <CNetID>@midway2.rcc.uchicago.edu:<path you want to store the directory> <path to local dir>
+```
