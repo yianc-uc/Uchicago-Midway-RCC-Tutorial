@@ -130,8 +130,30 @@ The options are basically the same as `sbatch`. For example using the command ab
 
 ### Managing Jobs
 
-The Slurm job scheduler provides several command-line tools for checking on the status of your jobs and for managing them. For a complete list of Slurm commands, see the Slurm man pages. Here are a few commands that you may find particularly useful:
+The Slurm job scheduler provides several command-line tools for checking on the status of your jobs and for managing them. Here are a few commands that you may find particularly useful:
 
 * **squeue**: finds out the status of jobs submitted by you and other users.
 * **sacct**: retrieves job history and statistics about past jobs.
 * **scancel**: cancels jobs you have submitted.
+
+For example you can check the status of your job by using 
+
+```
+squeue --user=<CNetID>
+```
+
+The `squeue` command will also display the id of the your submitting jobs. And you can use the id to cancel a specific job, for example, to cancel a job with id 8885128, do the following:
+
+```
+scancel 8885128
+```
+
+If you want to cancel all the jobs submitted by a specific user, type
+
+```
+scancel --user=<CNetID>
+```
+
+## Data Transfer
+
+RCC provides a number of methods for accessing and transferring data in/out of the systems. Here I will only introduce the command-line approach. For the more methods for different systems, please refer to [page](https://rcc.uchicago.edu/docs/data-transfer/index.html#http-web-access)
