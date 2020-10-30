@@ -171,3 +171,5 @@ To download the files or directories to your local machine, use the following:
 scp <CNetID>@midway2.rcc.uchicago.edu:<path you want to store the file> <path to the local file>
 scp -r <CNetID>@midway2.rcc.uchicago.edu:<path you want to store the directory> <path to local dir>
 ```
+
+Here are all the necessary information you need to interact with the Uchicago RCC. For specific questions, please check out the [RCC Website](https://rcc.uchicago.edu/docs/connecting/index.html) and contact with the teaching team.
