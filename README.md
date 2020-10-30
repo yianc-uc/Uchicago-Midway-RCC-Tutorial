@@ -54,9 +54,9 @@ With ThinLinc it is possible to maintain an active session after you have closed
 
 To exit ThinLinc and terminate your session completely, simply exit or close the ThinLinc application.
 
-## Run Jobs on Midway
+## Running Jobs on Midway
 
-### Check Your Account Balance
+### Checking Your Account Balance
 
 Firstly, when you connect to the cluster, you are in one of its login nodes. Login nodes may be used for compiling and debugging code, installing software, editing and managing files, submitting jobs, or any other work that is not long-running or computationally intensive. Login nodes should not be used for computionally intensive work. If you find your process is terminated and restarted, be sure to use compute node following the instructions below.
 
@@ -74,4 +74,33 @@ To see the overall summary of your usage, type
 rcchelp usage
 ```
 
+### Submitting Jobs
 
+The Midway computing cluster uses the **Slurm** resource manager to schedule jobs and control interactive access to compute nodes. I will introduce two major ways of how to submit job using Slurm scheduler.
+
+#### Batch Jobs
+
+You can use the `sbatch` command to request certain amount of computational resources and submit jobs. Users typically write an “sbatch script” that contains all the commands and parameters neccessary to run the program on the cluster. Here is an example of an sbatch script
+
+```
+#!/bin/bash
+#SBATCH --job-name=example_python
+#SBATCH --output=script.out
+#SBATCH --error=script.err
+#SBATCH --time=00:05:00
+#SBATCH --partition=broadwl
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem-per-cpu=2000
+
+module load python
+python script.py
+```
+
+Here is a detailed explanation of what each of the option does:
+
+| Option  |  Description |
+|:--|:--|
+| `#SBATCH --job-name=example_sbatch`  | Assigns label example_sbatch to the job.  |
+|   |   |
+|   |   |
