@@ -156,4 +156,11 @@ scancel --user=<CNetID>
 
 ## Data Transfer
 
-RCC provides a number of methods for accessing and transferring data in/out of the systems. Here I will only introduce the command-line approach. For the more methods for different systems, please refer to [page](https://rcc.uchicago.edu/docs/data-transfer/index.html#http-web-access)
+RCC provides a number of methods for accessing and transferring data in/out of the systems. Here I will only introduce the command-line approach. For the more methods for different systems, please refer to [page](https://rcc.uchicago.edu/docs/data-transfer/index.html#http-web-access).
+
+Most UNIX-like operating systems (Mac OS X, Linux, etc) provide a scp command which can be accessed from the command line. To transfer files from your local computer to your home directory on Midway2, open a terminal window and issue the command:
+
+```
+scp <path to the local file> <CNetID>@midway2.rcc.uchicago.edu:<path you want to store the file>
+scp -r <path to local dir> <CNetID>@midway2.rcc.uchicago.edu:<path you want to store the directory>
+```
